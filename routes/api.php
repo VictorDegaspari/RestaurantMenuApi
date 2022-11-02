@@ -26,4 +26,5 @@ Route::middleware('auth:api')->group( function () {
 });
 
 Route::post('/login', [ AuthController::class, 'login' ]);
+Route::get('/get-products', [ ProductsController::class, 'index' ]);
 Route::post('/register', [ AuthController::class, 'register' ]);

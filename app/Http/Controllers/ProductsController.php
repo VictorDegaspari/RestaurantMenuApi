@@ -18,7 +18,7 @@ class ProductsController extends BaseController
      */
     public function index()
     {
-        $products = Product::paginate(15);
+        $products = Product::paginate(25);
         return $this->sendResponse($products, 'Products retrieved successfully.');
     }
 
