@@ -18,8 +18,8 @@ class Product extends Model
         'name',
         'detail',
         'price',
+        'image'
     ];
-
 
     public function demands()
     {

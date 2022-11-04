@@ -25,6 +25,9 @@ Route::middleware('auth:api')->group( function () {
     Route::resource('demands', DemandsController::class);
 });
 
-Route::post('/login', [ AuthController::class, 'login' ]);
+Route::middleware('guest')->group( function () {
+    Route::post('/register', [ AuthController::class, 'register' ]);
+    Route::post('/login', [ AuthController::class, 'login' ]);
+});
+
 Route::get('/get-products', [ ProductsController::class, 'index' ]);
-Route::post('/register', [ AuthController::class, 'register' ]);

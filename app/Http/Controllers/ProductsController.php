@@ -35,7 +35,7 @@ class ProductsController extends BaseController
         $validator = Validator::make($data, [
             'name' => 'required',
             'price' => 'required',
-            'quantity' => 'required',
+            'image' => 'required',
         ]);
 
         if ($validator->fails()) return $this->sendError('Validation Error.', $validator->errors());
