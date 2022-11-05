@@ -74,7 +74,7 @@ class ProductsController extends BaseController
         if (!empty($data[ 'detail' ])) $product->detail = $data['detail'];
         if (!empty($data[ 'name' ])) $product->name = $data['name'];
         if (!empty($data[ 'price' ])) $product->price = $data['price'];
-        if (!empty($data[ 'quantity' ])) $product->quantity = $data['quantity'];
+        if (!empty($data[ 'image' ])) $product->image = $data['image'];
 
         $product->save();
         return $this->sendResponse($product, 'Product updated successfully.');
